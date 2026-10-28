@@ -1,0 +1,239 @@
+{
+  "verification": {
+    "track_B": {
+      "n": 5591,
+      "accuracy": 96.0293,
+      "macro_f1": 96.3854,
+      "odia_tp": 49,
+      "odia_fp": 3,
+      "odia_fn": 3
+    },
+    "track_C": {
+      "n": 756,
+      "correct": 400,
+      "accuracy_eq_odia_recall": 52.9101,
+      "sent_to_bert_pct": 53.0423,
+      "by_variant": {
+        "roman": {
+          "n": 649,
+          "correct": 372,
+          "accuracy": 57.319
+        },
+        "mixed": {
+          "n": 107,
+          "correct": 28,
+          "accuracy": 26.1682
+        }
+      },
+      "by_length": {
+        "<5": {
+          "n": 177,
+          "correct": 41,
+          "accuracy": 23.1638
+        },
+        "5-9": {
+          "n": 301,
+          "correct": 169,
+          "accuracy": 56.1462
+        },
+        ">=10": {
+          "n": 278,
+          "correct": 190,
+          "accuracy": 68.3453
+        }
+      },
+      "by_route": {
+        "FTR": {
+          "n": 355,
+          "correct": 202,
+          "accuracy": 56.9014
+        },
+        "BERT": {
+          "n": 401,
+          "correct": 198,
+          "accuracy": 49.3766
+        }
+      }
+    }
+  },
+  "translationese_gap": {
+    "odia_recall_like_for_like": {
+      "benchmark": 94.2308,
+      "native": 52.9101,
+      "gap": 41.3207,
+      "ci95": [
+        33.3639,
+        47.8124
+      ],
+      "resamples_with_gap_le_0": 0,
+      "resamples": 5000
+    },
+    "length_matched_ge10_words": {
+      "benchmark_n": 36,
+      "native_n": 278,
+      "benchmark": 97.2222,
+      "native": 68.3453,
+      "gap": 28.8769
+    }
+  },
+  "vocabulary": {
+    "odia_training_sentences": 409,
+    "odia_training_distinct_words": 3112,
+    "other_training_sentences": 44240,
+    "other_training_distinct_words": 205526,
+    "benchmark_odia_test": {
+      "tokens": 753,
+      "seen_in_odia_training_pct": 57.1049,
+      "seen_only_in_other_languages_pct": 13.5458
+    },
+    "native_odia": {
+      "tokens": 7684,
+      "seen_in_odia_training_pct": 34.9297,
+      "seen_only_in_other_languages_pct": 29.2426
+    },
+    "common_native_words_unseen_in_odia_training": [
+      {
+        "word": "jagannath",
+        "count_native": 57,
+        "seen_in": {
+          "ben": 3,
+          "hin": 3
+        }
+      },
+      {
+        "word": "sir",
+        "count_native": 50,
+        "seen_in": {
+          "snd": 32,
+          "urd": 14
+        }
+      },
+      {
+        "word": "jay",
+        "count_native": 48,
+        "seen_in": {
+          "ben": 91,
+          "snd": 67
+        }
+      },
+      {
+        "word": "song",
+        "count_native": 38,
+        "seen_in": {
+          "ben": 1,
+          "guj": 1
+        }
+      },
+      {
+        "word": "video",
+        "count_native": 37,
+        "seen_in": {
+          "hin": 5,
+          "mar": 4
+        }
+      },
+      {
+        "word": "gita",
+        "count_native": 36,
+        "seen_in": {
+          "snd": 10,
+          "mar": 3
+        }
+      },
+      {
+        "word": "comedy",
+        "count_native": 35,
+        "seen_in": {
+          "brx": 2,
+          "ben": 1
+        }
+      },
+      {
+        "word": "gote",
+        "count_native": 30,
+        "seen_in": {
+          "mai": 2,
+          "asm": 1
+        }
+      },
+      {
+        "word": "kara",
+        "count_native": 30,
+        "seen_in": {
+          "hin": 8,
+          "urd": 6
+        }
+      },
+      {
+        "word": "like",
+        "count_native": 25,
+        "seen_in": {
+          "mai": 4,
+          "mal": 1
+        }
+      }
+    ]
+  },
+  "emoji_ablation_diagnostic_only": {
+    "rows_with_emoji": 324,
+    "our_fasttext_as_preprocessed": 44.709,
+    "our_fasttext_emoji_stripped": 44.8413
+  },
+  "published_system_on_native": {
+    "n": 756,
+    "note": "raw text, as in Track A",
+    "fasttext_alone": 93.7831,
+    "bert_alone": 49.3386,
+    "ensemble_0.6": {
+      "odia_recall": 92.1958,
+      "sent_to_bert_pct": 4.4974
+    },
+    "ensemble_0.95": {
+      "odia_recall": 76.5873,
+      "sent_to_bert_pct": 30.5556
+    }
+  },
+  "false_alarm_analysis": {
+    "negatives": {
+      "source": "held-out 10% non-Odia benchmark sentences, never trained on",
+      "n": 2000,
+      "median_words_full": 12.0,
+      "median_words_short": 6.0,
+      "median_words_native": 8.0
+    },
+    "rejects": {
+      "n": 44,
+      "variant": {
+        "mixed": 12,
+        "roman": 32
+      },
+      "note": "mostly code-mixed Odia, so NOT usable as negatives"
+    },
+    "models": {
+      "published_fasttext": {
+        "catches_odia_native": 93.7831,
+        "false_odia_full_length": 0.9,
+        "false_odia_short_text": 2.55,
+        "balanced_accuracy_short": 95.6165,
+        "calls_rejects_odia": 93.1818,
+        "false_odia_rate_needed_to_match_ours": 49.1241
+      },
+      "published_ensemble_0.6": {
+        "catches_odia_native": 92.1958,
+        "false_odia_full_length": 0.9,
+        "false_odia_short_text": 2.25,
+        "balanced_accuracy_short": 94.9729,
+        "calls_rejects_odia": 90.9091,
+        "false_odia_rate_needed_to_match_ours": 47.5368
+      },
+      "our_fasttext": {
+        "catches_odia_native": 44.709,
+        "false_odia_full_length": 0.0,
+        "false_odia_short_text": 0.05,
+        "balanced_accuracy_short": 72.3295,
+        "calls_rejects_odia": 34.0909
+      }
+    },
+    "our_ensemble_note": "not scorable on negatives: fine-tuned BERT weights not included"
+  }
+}

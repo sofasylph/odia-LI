@@ -1,0 +1,7 @@
+# Analysis script (CPU). The notebook installs its own dependencies in Colab.
+fasttext==0.9.3
+numpy>=2.0
+scikit-learn>=1.3
+torch>=2.6
+transformers>=4.40
+openpyxl>=3.1

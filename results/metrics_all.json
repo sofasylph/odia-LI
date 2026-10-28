@@ -1,0 +1,233 @@
+{
+  "track_A2_ftr_alone": {
+    "accuracy": 70.69740778560039,
+    "macro_f1": 56.79796857533576,
+    "odia_f1": 62.57124762507916,
+    "odia_precision": 46.29803186504217,
+    "odia_recall": 96.484375
+  },
+  "track_A3_bert_alone": {
+    "accuracy": 79.98244388312642,
+    "macro_f1": 67.27913030120163,
+    "odia_f1": 71.7948717948718,
+    "odia_precision": 57.444314185228606,
+    "odia_recall": 95.703125
+  },
+  "track_A_ensemble_at_0.6": {
+    "accuracy": 75.24587520825496,
+    "macro_f1": 61.41362958283181,
+    "odia_f1": 67.71545827633378,
+    "escalated_pct": 12.045645903871304,
+    "threshold": 0.6
+  },
+  "track_A2_ensemble_val_selected": {
+    "accuracy": 80.46377388535032,
+    "macro_f1": 67.42010120334716,
+    "odia_f1": 72.25806451612902,
+    "odia_precision": 57.50962772785623,
+    "odia_recall": 97.18004338394793,
+    "threshold": 0.95,
+    "threshold_selected_on": "validation split only; target never used",
+    "evaluated_on": "50240 rows excluding validation"
+  },
+  "track_A_diagnostic_target_matched": {
+    "threshold": 0.95,
+    "accuracy": 80.55570484226367,
+    "status": "DIAGNOSTIC ONLY - chosen by matching the published target on the test set; never report this as a result"
+  },
+  "track_A4_threshold_sweep": {
+    "0.1": {
+      "accuracy": 70.69740778560039,
+      "macro_f1": 56.79796857533576,
+      "odia_f1": 62.57124762507916,
+      "escalated_pct": 0.0
+    },
+    "0.2": {
+      "accuracy": 70.700990666595,
+      "macro_f1": 56.80144066755821,
+      "odia_f1": 62.57124762507916,
+      "escalated_pct": 0.0053743214919116464
+    },
+    "0.3": {
+      "accuracy": 70.83176582289819,
+      "macro_f1": 56.96708975839887,
+      "odia_f1": 62.73015873015873,
+      "escalated_pct": 0.30096200354705216
+    },
+    "0.4": {
+      "accuracy": 71.67911717812294,
+      "macro_f1": 57.88272872226345,
+      "odia_f1": 63.61880231809401,
+      "escalated_pct": 2.1658515612403932
+    },
+    "0.5": {
+      "accuracy": 73.2806649827126,
+      "macro_f1": 59.47402668128814,
+      "odia_f1": 64.44444444444444,
+      "escalated_pct": 6.103437774314326
+    },
+    "0.6": {
+      "accuracy": 75.24587520825496,
+      "macro_f1": 61.41362958283181,
+      "odia_f1": 67.71545827633378,
+      "escalated_pct": 12.045645903871304
+    },
+    "0.7": {
+      "accuracy": 77.08926747998065,
+      "macro_f1": 63.48733123681524,
+      "odia_f1": 69.07574704656011,
+      "escalated_pct": 18.02368284337436
+    },
+    "0.8": {
+      "accuracy": 78.47046810340194,
+      "macro_f1": 65.05886110186252,
+      "odia_f1": 69.90154711673699,
+      "escalated_pct": 24.132494939180596
+    },
+    "0.9": {
+      "accuracy": 79.88928897726662,
+      "macro_f1": 66.7418352191352,
+      "odia_f1": 71.89072609633357,
+      "escalated_pct": 31.977212876874294
+    },
+    "0.95": {
+      "accuracy": 80.55570484226367,
+      "macro_f1": 67.55382444888123,
+      "odia_f1": 72.005772005772,
+      "escalated_pct": 37.87105211300407
+    }
+  },
+  "track_B1_finetuned_ftr_alone": {
+    "accuracy": 95.77893042389555,
+    "macro_f1": 95.74075501509756,
+    "odia_f1": 98.0392156862745,
+    "odia_precision": 100.0,
+    "odia_recall": 96.15384615384616
+  },
+  "track_B_finetuned_ensemble": {
+    "accuracy": 96.02933285637631,
+    "macro_f1": 96.38538074315915,
+    "odia_f1": 94.23076923076923,
+    "odia_precision": 94.23076923076923,
+    "odia_recall": 94.23076923076923,
+    "threshold": 0.9
+  },
+  "track_C_native_odia": {
+    "n": 756,
+    "accuracy": 52.910052910052904,
+    "odia_recall": 52.910052910052904,
+    "odia_precision": 100.0,
+    "odia_f1": 69.20415224913495,
+    "macro_f1": null,
+    "escalated_pct": 53.042328042328045
+  },
+  "translationese_gap": {
+    "odia_recall_like_for_like": 41.32071632071632,
+    "accuracy_brief": 43.11927994632341,
+    "odia_f1": 25.026616981634277
+  },
+  "confidence_intervals": {
+    "A2 FTR alone": {
+      "n": 55821,
+      "n_odia": 512,
+      "accuracy_ci": [
+        70.31941384066928,
+        71.07195320757421
+      ],
+      "macro_f1_ci": [
+        56.361217748628775,
+        57.20316136928897
+      ],
+      "odia_f1_ci": [
+        59.791918243213026,
+        65.14910342997872
+      ]
+    },
+    "A3 BERT alone": {
+      "n": 55821,
+      "n_odia": 512,
+      "accuracy_ci": [
+        79.63660629512191,
+        80.30853083964817
+      ],
+      "macro_f1_ci": [
+        66.7897506590183,
+        67.73180636398314
+      ],
+      "odia_f1_ci": [
+        68.96972989867568,
+        74.38401611252944
+      ]
+    },
+    "A ensemble (cal.)": {
+      "n": 55821,
+      "n_odia": 512,
+      "accuracy_ci": [
+        80.22061589724298,
+        80.89254044176923
+      ],
+      "macro_f1_ci": [
+        67.10757975676317,
+        67.94854058981181
+      ],
+      "odia_f1_ci": [
+        69.31925535736161,
+        74.66868452604356
+      ]
+    },
+    "B fine-tuned ensemble": {
+      "n": 5591,
+      "n_odia": 52,
+      "accuracy_ci": [
+        95.52852799141476,
+        96.51225183330352
+      ],
+      "macro_f1_ci": [
+        95.67315165256551,
+        97.00431971964998
+      ],
+      "odia_f1_ci": [
+        88.8888888888889,
+        98.11408106219426
+      ]
+    },
+    "C native Odia": {
+      "n": 756,
+      "n_odia": 756,
+      "accuracy_ci": [
+        49.338624338624335,
+        56.481481481481474
+      ],
+      "macro_f1_ci": [
+        3.6968328752781043,
+        4.588904249279872
+      ],
+      "odia_f1_ci": [
+        66.07617360496015,
+        72.18934911242603
+      ]
+    }
+  },
+  "translationese_gap_ci": {
+    "accuracy": [
+      39.547188934597266,
+      46.73756256512025
+    ],
+    "odia_f1": [
+      19.233642793987613,
+      30.011648180984228
+    ]
+  },
+  "config": {
+    "seed": 42,
+    "epochs": 1,
+    "batch": 32,
+    "lr": 2e-05,
+    "fasttext_lr": 0.5,
+    "fasttext_thread": 1,
+    "fasttext_seed": 7,
+    "fasttext_valid_macro_f1": 95.81036955442332,
+    "ensemble_threshold": 0.9,
+    "trained_on": "train split only"
+  }
+}

@@ -1,0 +1,12 @@
+# datasets: downloaded or private, never committed
+data/*.json
+data/*.jsonl
+data/*.zip
+# published / large model weights: downloaded, never committed
+models/IndicLID-FTR.bin
+models/*.pt
+# python / notebook clutter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
